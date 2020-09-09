@@ -23,7 +23,8 @@
     "build-postgresql-schema": "dotenv prisma introspect -- --schema=./prisma/schema.postgresql.prisma",
     "build-postgresql-client": "dotenv prisma generate -- --schema=./prisma/schema.postgresql.prisma",
     "extract-lang": "formatjs extract {pages,components}/**/*.js --out-file lang/en.json",
-    "compile-lang": "formatjs compile-folder --ast lang lang-compiled"
+    "compile-lang": "formatjs compile-folder --ast lang lang-compiled",
+    "postbuild": "next-on-netlify"
   },
   "lint-staged": {
     "**/*.js": [
@@ -60,6 +61,7 @@
     "maxmind": "^4.1.4",
     "moment-timezone": "^0.5.31",
     "next": "^9.5.3",
+    "next-on-netlify": "^2.4.0",
     "promise-polyfill": "^8.1.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
